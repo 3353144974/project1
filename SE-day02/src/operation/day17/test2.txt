@@ -1,0 +1,35 @@
+构造方法：
+File(String pathname) ：通过将给定的路径名字符串转换为抽象路径名来创建新的 File实例。
+常用方法：
+getAbsolutePath() ：返回此File的绝对路径名字符串。
+getPath() ：将此File转换为路径名字符串。
+getName() ：返回由此File表示的文件或目录的名称。
+length() ：返回由此File表示的文件的长度。
+注意事项：
+文件夹中如果有文件则不能删除
+绝对路径和相对路径
+绝对路径：从盘符开始的路径，这是一个完整的路径。
+相对路径：相对于项目目录的路径，这是一个便捷的路径，开发中经常使用。
+判断功能的方法：
+exists() ：此File表示的文件或目录是否实际存在。
+createNewFile()：此File表示的是否为目录。
+isFile()：此File表示的是否为文件。
+创建删除功能的方法
+createNewFile() ：当且仅当具有该名称的文件尚不存在时，创建一个新的空文件。
+delete() ：删除由此File表示的文件或目录。
+mkdir() ：创建由此File表示的目录。
+mkdirs() ：创建由此File表示的目录，包括任何必需但不存在的父目录。
+目录的遍历：
+String[] list() ：返回一个String数组，表示该File目录中的所有子文件或目录。
+File[] listFiles() ：返回一个File数组，表示该File目录中的所有的子文件或目录。
+递归:
+自己调用自己。
+文件过滤器优化
+java.io.FileFilter 是一个接口，是File的过滤器。 
+该接口的对象可以传递给File类的 listFiles(FileFilter) 作为参数， 接口中只有一个方法。
+boolean accept(File pathname) ：测试pathname是否应该包含在当前File目录中，符合则返回true。
+
+
+
+
+
