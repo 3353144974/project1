@@ -1,0 +1,25 @@
+i>i+1  如何让这个式子成立
+以下程序有没有错误？为什么？
+byte num=10;
+byte num1=20;
+byte num2=20;
+byte result=(byte) num1+num2;
+负数取余取左边的符号
+int a=1;
+a=a++;
+结果为1
+int a=10;
+int b=10;
+int c=10;
+a=b++;
+c=a--;
+b=a++;
+a=c--;
+结果为
+9
+10
+8
+=
+==
+===
+的区别

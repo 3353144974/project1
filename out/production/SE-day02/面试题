@@ -1,0 +1,33 @@
+int a=1;
+for(int i=0;i<100;i++){
+    a=a++;
+}
+a的结果为1
+//a的结果是？
+int a=0;
+test01(a);
+a++;
+System.out.println(a);
+public static void test01(int a){
+a++;
+}
+结果为1
+double a=1.0/0;
+System.out.println(a);
+//0会向上转型变成无穷小，任何一个数除以无穷小都会变成无穷大(微积分);
+ECMAScript和JavaScript有什么关系？
+ECMAScript:索所有脚本语言的标准
+JavaScript：满足ECMAScript标准的脚本语言
+//
+jq对象和js对象的转换？
+jq==>js
+jq对象[索引]或者jq对象.get[索引]
+js==>jq $(js对象)
+//
+jq的ready和js的onload 有什么区别？
+1、执行时间不同
+ready在DOM结构绘制完毕后就执行，不必等到加载完毕
+onload必须要加载完毕才能执行
+2、编写数据不同
+onload不能同时编写多个，多个只会执行一个
+ready可以同时编写多个，都能执行

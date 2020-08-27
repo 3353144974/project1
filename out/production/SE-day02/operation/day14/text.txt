@@ -1,0 +1,82 @@
+1-1. 请说出异常的继承体系
+
+Throwable类，是所有异常类的跟类，所有的异常都是由它继承
+它有有两个子类：Error和Exception，平常所说的异常指Exception。
+
+1-2. 请说出你对错误(Error)的理解
+
+错误是不能处理的，因为这是系统内部的错误，运行时报错，系统问题。
+有两种情况：内存溢出或系统崩溃
+
+1-3. 请说出你对编译异常(Expection的理解)
+
+Expection：是程序员可以根据问题描述可以处理的。
+Expection异常分为两种：编译时异常和运行时异常
+编译时异常时必须处理的，运行时异常时可以处理的，但不一定处理，一般不处理
+
+1-4. 请说出你对运行时异常(RuntimeException)的理解
+
+是Exception的一个特殊的子类	
+当出现这样的异常时，总是由虚拟机接管。
+运行时异常（RuntimeException）也称作未检测的异常（unchecked exception），
+这表示这种异常不需要编译器来检测。
+RuntimeException是所有可以在运行时抛出的异常的父类。
+一个方法除要捕获异常外，如果它执行的时候可能会抛出RuntimeException的子类，
+那么它就不需要用throw语句来声明抛出的异常。
+
+2-1请说出虚拟机处理异常的方式
+
+1.打印错误信息
+a.异常的类名
+b.异常信息
+c.异常的位置
+d.错误的行号
+2.将程序停止
+
+3-1请说出四种运行时异常
+
+ArrayIndexOutOfBoundsException - 角标越界异常
+FileNotFoundException - 文件不存在异常
+NullPointerException - 空指针引用异常 
+ClassCastException - 类型强制转换异常。 
+IllegalArgumentException - 传递非法参数异常。 
+ArithmeticException - 算术运算异常 
+ArrayStoreException - 向数组中存放与声明类型不兼容对象异常 
+IndexOutOfBoundsException - 下标越界异常 
+NegativeArraySizeException - 创建一个大小为负数的数组错误异常 
+NumberFormatException - 数字格式异常 
+SecurityException - 安全异常 
+UnsupportedOperationException - 不支持的操作异常
+
+4-1. 请说出throw的使用位置，作用是什么?
+
+使用位置：throw用在方法内
+作用：用来抛出一个异常对象，将这个异常对象传递到调用者处，并结束当前方法的执行。
+
+4-2. 请说出 throws的使用位置，作用是什么?
+
+使用位置：关键字throws运用于方法声明之上
+作用：用于表示当前方法不处理异常,而是提醒该方法的调用者来处理异常(抛出异常).
+
+5-1. 异常处理方式有几种分别是什么
+
+抛出异常(throw)用在方法内，用来抛出一个异常对象，将这个异常对象传递到调用者处，并结束当前方法的执行。
+那么对于调用者来说，一种是进行捕获处理，另一种就是继续讲问题声明出去，使用throws 声明处理。
+1. 该方法不处理,而是声明抛出,由该方法的调用者来处理(throws)。
+2. 在方法中使用try-catch的语句块来处理异常。
+
+5-2. 详细阐述每种方式对异常是如何处理的
+
+抛出异常(throw)：
+1. 创建一个异常对象。封装一些提示信息(信息可以自己编写)。 
+2. 需要将这个异常对象告知给调用者。怎么告知呢？怎么将这个异常对象传递到调用者处呢？
+通过关键字throw 就可以完成。throw 异常对象。 
+throw用在方法内，用来抛出一个异常对象，将这个异常对象传递到调用者处，并结束当前方法的执行。
+
+声明异常throws：
+将问题标识出来，报告给调用者。如果方法内通过throw抛出了编译时异常，
+而没有捕获处理，那么必须通过throws进行声明，让调用者去处理。
+
+捕获异常try…catch：
+try：该代码块中编写可能产生异常的代码。 
+catch：用来进行某种异常的捕获，实现对捕获到的异常进行处理。

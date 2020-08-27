@@ -1,0 +1,22 @@
+1.请说出基本类型对应的八个包装类分别是什么？、
+		byte		Byte
+		short		Short
+		int		Integer
+		long		Long
+		float		Float
+		double		Double
+		char		Character
+		boolean		Boolean
+2.请说出如何把字符串转换为对应的基本数据类型，有什么注意点？
+public static byte parseByte(String s) ：将字符串参数转换为对应的byte基本类型。 
+public static short parseShort(String s) ：将字符串参数转换为对应的short基本类型。
+ public static int parseInt(String s) ：将字符串参数转换为对应的int基本类型。
+ public static long parseLong(String s) ：将字符串参数转换为对应的long基本类型。
+ public static float parseFloat(String s) ：将字符串参数转换为对应的float基本类型。 
+public static double parseDouble(String s) ：将字符串参数转换为对应的double基本类型。 
+public static boolean parseBoolean(String s) ：将字符串参数转换为对应的boolean基本类型。
+注意:如果字符串参数的内容无法正确转换为对应的基本类型，则会抛出 java.lang.NumberFormatException 异常。
+3.请说出你对自动装箱的理解
+自动装箱的理解：从基本类型转换为对应的包装类对象。
+4.请说出你对自动拆箱的理解
+自动拆箱的理解：从包装类对象转换为对应的基本类型。

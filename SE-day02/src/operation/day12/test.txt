@@ -1,0 +1,3 @@
+请回答hasNext()和next()方法的作用:
+public E next() :返回迭代的下一个元素。 
+public boolean hasNext() :如果仍有元素可以迭代，则返回 true。

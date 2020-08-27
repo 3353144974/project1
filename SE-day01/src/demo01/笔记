@@ -1,0 +1,23 @@
+整型：
+    byte  字节
+    short 短整型
+    int   整型
+    long  长整型
+浮点型：
+    float  单精度   小数位7
+    double 双精度   默认  小数位15
+字符型：
+    char
+布尔型：
+    boolean
+从小到大：byte short char int float long double
+规则从小到大  byte short char int long float double
+逻辑运算符
+&逻辑与
+|逻辑或
+!逻辑非
+^异或
+短路(&&和||)：当左边确定结果时，右边将不再运算
+   优点：提高了程序的运行效率
+三元表达式的结果必须要被使用
+switch里面所有都不匹配就执行default:
