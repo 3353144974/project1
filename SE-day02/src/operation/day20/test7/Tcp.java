@@ -11,7 +11,7 @@ public class Tcp {
 
     public static void main(String[] args) throws Exception {
         System.out.println("服务器 启动..... ");
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(1);
         ServerSocket serverSocket = new ServerSocket(8888);
         while (true) {
             Socket accept = serverSocket.accept();
@@ -35,7 +35,6 @@ public class Tcp {
                 }
             });
             executorService.submit(thread);
-//            executorService.submit(thread);
         }
 
     }
